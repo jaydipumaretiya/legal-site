@@ -29,11 +29,11 @@ export interface AppConfig {
 }
 
 export const COMPANY_INFO = {
-  name: "WP InfoTech",
-  legalName: "WP InfoTech Solutions",
-  domain: "legal.wpinfotech.com",
-  baseUrl: "https://legal.wpinfotech.com",
-  supportEmail: "support@wpinfotech.com",
-  contactEmail: "legal@wpinfotech.com",
-  website: "https://wpinfotech.com"
+  name: "Enlistech",
+  legalName: "Enlistech Solutions",
+  domain: "legal.enlistech.com",
+  baseUrl: "https://legal.enlistech.com",
+  supportEmail: "support@enlistech.com",
+  contactEmail: "legal@enlistech.com",
+  website: "https://enlistech.com"
 };

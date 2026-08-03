@@ -5,7 +5,7 @@ export const apps: AppConfig[] = [
     slug: "clocky",
     name: "Clocky",
     description: "Smart Alarm Clock & Sleep Assistant",
-    developer: "WP InfoTech",
+    developer: "Enlistech",
     supportEmail: "support@enlistech.com",
     website: "https://legal.enlistech.com",
     packageName: "com.enlistech.clocky",
@@ -56,7 +56,7 @@ export const apps: AppConfig[] = [
     slug: "notey",
     name: "Notey",
     description: "Minimalist Markdown & Cloud Synced Notes",
-    developer: "WP InfoTech",
+    developer: "Enlistech",
     supportEmail: "support@enlistech.com",
     website: "https://legal.enlistech.com",
     packageName: "com.enlistech.notey",
@@ -90,7 +90,7 @@ export const apps: AppConfig[] = [
       "Navigate to Settings > Account Profile.",
       "Scroll down to the Danger Zone and select 'Delete Account'.",
       "Confirm your account password to permanently purge all synced notes and user data from our servers.",
-      "Alternatively, email support@wpinfotech.com from your registered email address with the subject 'Notey Account Deletion'."
+      "Alternatively, email support@enlistech.com from your registered email address with the subject 'Notey Account Deletion'."
     ],
 
     faqs: [
@@ -108,7 +108,7 @@ export const apps: AppConfig[] = [
     slug: "fittrack",
     name: "FitTrack",
     description: "Daily Workout, Activity & Health Log",
-    developer: "WP InfoTech",
+    developer: "Enlistech",
     supportEmail: "support@enlistech.com",
     website: "https://legal.enlistech.com",
     packageName: "com.enlistech.fittrack",
@@ -141,7 +141,7 @@ export const apps: AppConfig[] = [
       "Open FitTrack and go to Profile > Settings.",
       "Tap 'Account Security' > 'Request Data Erasure & Account Deletion'.",
       "Click 'Confirm Permanent Deletion'. All health records will be purged immediately.",
-      "You can also contact support@wpinfotech.com for manual account deletion."
+      "You can also contact support@enlistech.com for manual account deletion."
     ],
 
     faqs: [
@@ -155,7 +155,7 @@ export const apps: AppConfig[] = [
     slug: "scannr",
     name: "Scannr",
     description: "HD PDF Scanner & OCR Text Extractor",
-    developer: "WP InfoTech",
+    developer: "Enlistech",
     supportEmail: "support@enlistech.com",
     website: "https://legal.enlistech.com",
     packageName: "com.enlistech.scannr",

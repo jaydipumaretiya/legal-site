@@ -47,7 +47,7 @@ export default function StructuredData({ type, app }: StructuredDataProps) {
       "@type": "WebSite",
       name: `${COMPANY_INFO.name} Legal Center`,
       url: COMPANY_INFO.baseUrl,
-      description: "Privacy Policies, Terms of Service, Account Deletion and Support for WP InfoTech applications.",
+      description: `Privacy Policies, Terms of Service, Account Deletion and Support for ${COMPANY_INFO.name} applications.`,
     };
   }
 

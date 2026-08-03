@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import Breadcrumb, { BreadcrumbItem } from "@/components/Breadcrumb";
 import { Printer, Copy, Check, ArrowUp } from "lucide-react";
 import { useState } from "react";
+import { COMPANY_INFO } from "@/types/app";
 
 interface LegalDocLayoutProps {
   title: string;
@@ -111,7 +112,7 @@ export default function LegalDocLayout({
 
             {/* Bottom Scroll To Top Button */}
             <div className="pt-8 mt-12 border-t border-slate-100 flex items-center justify-between no-print text-sm">
-              <span className="text-slate-500">Official WP InfoTech Legal Document</span>
+              <span className="text-slate-500">Official {COMPANY_INFO.name} Legal Document</span>
               <button
                 onClick={scrollToTop}
                 className="inline-flex items-center gap-1.5 text-sky-600 hover:text-sky-700 font-semibold"
