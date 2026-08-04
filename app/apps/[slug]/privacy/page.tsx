@@ -4,7 +4,7 @@ import { getAppBySlug, getAllAppSlugs } from "@/data/apps";
 import LegalDocLayout from "@/components/LegalDocLayout";
 import StructuredData from "@/components/StructuredData";
 import { COMPANY_INFO } from "@/types/app";
-import { ShieldCheck, CheckCircle2, AlertTriangle, Lock } from "lucide-react";
+import { ShieldCheck, CheckCircle2, AlertTriangle, Lock, CreditCard } from "lucide-react";
 
 interface PrivacyParams {
   params: Promise<{ slug: string }>;
@@ -53,11 +53,12 @@ export default async function AppPrivacyPage({ params }: PrivacyParams) {
     { id: "permissions-used", title: "3. Device Permissions Used" },
     { id: "analytics", title: "4. Analytics & Telemetry" },
     { id: "advertising", title: "5. Advertising & Monetization" },
-    { id: "data-sharing", title: "6. Data Sharing & Disclosure" },
-    { id: "data-security", title: "7. Data Security & Protection" },
-    { id: "children-privacy", title: "8. Children's Privacy (COPPA)" },
-    { id: "policy-changes", title: "9. Changes to this Policy" },
-    { id: "contact-us", title: "10. Contact Information" },
+    { id: "in-app-purchases", title: "6. In-App Purchases & Subscriptions" },
+    { id: "data-sharing", title: "7. Data Sharing & Disclosure" },
+    { id: "data-security", title: "8. Data Security & Protection" },
+    { id: "children-privacy", title: "9. Children's Privacy (COPPA)" },
+    { id: "policy-changes", title: "10. Changes to this Policy" },
+    { id: "contact-us", title: "11. Contact Information" },
   ];
 
   return (
@@ -160,7 +161,7 @@ export default async function AppPrivacyPage({ params }: PrivacyParams) {
         <p className="text-slate-700 leading-relaxed">
           {app.ads ? (
             <>
-              This application is supported by third-party advertising SDKs {app.adNetworks ? `(${app.adNetworks.join(", ")})` : ""}. These partners may collect non-personal device identifiers (such as Advertising ID) to serve contextual and interest-based advertisements in compliance with platform ad policies.
+              This application is supported by third-party advertising services {app.adsProvider ? `(${app.adsProvider})` : app.adNetworks ? `(${app.adNetworks.join(", ")})` : ""}. These advertising partners may process non-personal device indicators (such as Advertising ID) to serve contextual and interest-based advertisements in compliance with platform ad policies.
             </>
           ) : (
             <>
@@ -170,9 +171,26 @@ export default async function AppPrivacyPage({ params }: PrivacyParams) {
         </p>
       </section>
 
+      <section id="in-app-purchases" className="space-y-4 pt-6">
+        <h2 className="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2">
+          6. In-App Purchases & Subscriptions
+        </h2>
+        <p className="text-slate-700 leading-relaxed">
+          {app.inAppPurchases ? (
+            <>
+              {app.inAppPurchasesDetails || `${app.name} offers optional In-App Purchases or premium feature upgrades.`} All financial transactions and payment card details are processed directly and securely by the official app store billing platform (Google Play Billing / Apple In-App Purchase). We do not store or collect financial payment credentials on our servers.
+            </>
+          ) : (
+            <>
+              <strong>{app.name}</strong> does not offer paid in-app subscriptions or microtransactions.
+            </>
+          )}
+        </p>
+      </section>
+
       <section id="data-sharing" className="space-y-4 pt-6">
         <h2 className="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2">
-          6. Data Sharing & Disclosure
+          7. Data Sharing & Disclosure
         </h2>
         <p className="text-slate-700 leading-relaxed">
           {app.sharesData ? (
@@ -187,7 +205,7 @@ export default async function AppPrivacyPage({ params }: PrivacyParams) {
 
       <section id="data-security" className="space-y-4 pt-6">
         <h2 className="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2">
-          7. Data Security & Protection
+          8. Data Security & Protection
         </h2>
         <p className="text-slate-700 leading-relaxed">
           We implement industry-standard administrative, physical, and technical safeguards (including HTTPS TLS encryption in transit) to safeguard your data against unauthorized access, loss, alteration, or destruction.
@@ -196,7 +214,7 @@ export default async function AppPrivacyPage({ params }: PrivacyParams) {
 
       <section id="children-privacy" className="space-y-4 pt-6">
         <h2 className="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2">
-          8. Children&apos;s Privacy (COPPA Compliance)
+          9. Children&apos;s Privacy (COPPA Compliance)
         </h2>
         <p className="text-slate-700 leading-relaxed">
           Our Application does not knowingly solicit or collect personal information from children under the age of 13. If we become aware that personal data from a child under 13 has been collected without verifiable parental consent, we will promptly delete that information from our records.
@@ -205,7 +223,7 @@ export default async function AppPrivacyPage({ params }: PrivacyParams) {
 
       <section id="policy-changes" className="space-y-4 pt-6">
         <h2 className="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2">
-          9. Changes to this Privacy Policy
+          10. Changes to this Privacy Policy
         </h2>
         <p className="text-slate-700 leading-relaxed">
           We reserve the right to update or modify this Privacy Policy at any time. When updates are made, we will revise the &quot;Last Updated&quot; date at the top of this document. Continued use of <strong>{app.name}</strong> after modifications indicates acceptance of the updated terms.
@@ -214,7 +232,7 @@ export default async function AppPrivacyPage({ params }: PrivacyParams) {
 
       <section id="contact-us" className="space-y-4 pt-6">
         <h2 className="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2">
-          10. Contact Information
+          11. Contact Information
         </h2>
         <p className="text-slate-700 leading-relaxed">
           If you have questions, feedback, or privacy concerns regarding this policy or <strong>{app.name}</strong>, please contact our legal and support team:

@@ -19,6 +19,9 @@ export interface AppConfig {
   analyticsProvider?: string;
   ads: boolean;
   adNetworks?: string[];
+  adsProvider?: string;
+  inAppPurchases?: boolean;
+  inAppPurchasesDetails?: string;
   accountRequired: boolean;
   accountDeletion: boolean;
   accountDeletionSteps?: string[];

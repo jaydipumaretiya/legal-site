@@ -15,11 +15,12 @@ import {
   FileText as FileTextIcon,
   Activity,
   Scan,
+  Package,
   Smartphone,
   Lock,
   CheckCircle2,
   AlertCircle,
-  ExternalLink
+  CreditCard
 } from "lucide-react";
 
 interface AppSlugParams {
@@ -68,6 +69,8 @@ export default async function AppOverviewPage({ params }: AppSlugParams) {
 
   const renderAppIcon = () => {
     switch (app.icon) {
+      case "Package":
+        return <Package className="w-10 h-10 text-sky-600" />;
       case "AlarmClock":
         return <AlarmClock className="w-10 h-10 text-sky-600" />;
       case "FileText":
@@ -241,15 +244,15 @@ export default async function AppOverviewPage({ params }: AppSlugParams) {
             </div>
 
             <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1">
-              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Third-Party Data Sharing</span>
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">In-App Purchases</span>
               <p className="text-sm font-semibold text-slate-800 flex items-center gap-1.5 pt-1">
-                {app.sharesData ? (
+                {app.inAppPurchases ? (
                   <>
-                    <AlertCircle className="w-4 h-4 text-amber-600" /> Ad Partner Sharing
+                    <CreditCard className="w-4 h-4 text-emerald-600" /> Pro / In-App Items
                   </>
                 ) : (
                   <>
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" /> No Data Sold/Shared
+                    <CheckCircle2 className="w-4 h-4 text-slate-600" /> None
                   </>
                 )}
               </p>

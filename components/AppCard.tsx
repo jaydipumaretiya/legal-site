@@ -10,10 +10,11 @@ import {
   FileText as FileTextIcon,
   Activity,
   Scan,
+  Package,
   Smartphone,
   CheckCircle2,
-  XCircle,
-  Lock
+  Lock,
+  CreditCard
 } from "lucide-react";
 
 interface AppCardProps {
@@ -24,6 +25,8 @@ export default function AppCard({ app }: AppCardProps) {
   // Helper to resolve icon component dynamically
   const renderAppIcon = () => {
     switch (app.icon) {
+      case "Package":
+        return <Package className="w-7 h-7 text-sky-600" />;
       case "AlarmClock":
         return <AlarmClock className="w-7 h-7 text-sky-600" />;
       case "FileText":
@@ -84,6 +87,12 @@ export default function AppCard({ app }: AppCardProps) {
           }`}>
             {app.ads ? "Ad Supported" : "No Ads"}
           </span>
+
+          {app.inAppPurchases && (
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+              <CreditCard className="w-3 h-3" /> In-App Purchases
+            </span>
+          )}
 
           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-50 text-slate-600 border border-slate-200">
             {app.permissions.length} Permissions
