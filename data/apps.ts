@@ -74,7 +74,6 @@ export const apps: AppConfig[] = [
     icon: "Activity",
     version: "2.0.0",
     lastUpdated: "August 2026",
-
     permissions: [
       "Package Usage Stats",
       "Query All Packages",
@@ -119,6 +118,122 @@ export const apps: AppConfig[] = [
       {
         question: "What data is collected for Ads and Analytics?",
         answer: "We only collect anonymized technical data (like device model and crash logs) to improve app stability. No actual usage statistics or internet activity is ever uploaded."
+      }
+    ]
+  },
+  {
+    slug: "typeflow",
+    name: "TypeFlow: Phone Keyboard for TV",
+    description: "Seamless wireless keyboard, voice dictation, and smart remote typing tool for Android TV & Google TV.",
+    developer: "Enlistech",
+    supportEmail: "support@enlistech.com",
+    website: "https://legal.enlistech.com",
+    packageName: "app.enlistech.typeflow",
+    category: "Tools & Utilities",
+    icon: "Keyboard",
+    version: "1.0.0",
+    lastUpdated: "August 2026",
+
+    permissions: [
+      "Internet & Local Network",
+      "Access Wi-Fi State",
+      "Change Wi-Fi Multicast State (mDNS / NSD Discovery)",
+      "Camera (QR Code TV Pairing)",
+      "Record Audio (Speech-to-Text Voice Typing)",
+      "Nearby Wi-Fi Devices"
+    ],
+
+    collects: [
+      "Paired TV IP addresses & encryption keys (stored strictly on-device)",
+      "Saved quick phrases & typing snippets (stored locally in DataStore)",
+      "Active text input / clipboard items temporarily held in memory during live transmission",
+      "UI and theme preferences (Dark mode, haptic feedback settings)"
+    ],
+
+    sharesData: false,
+    sharesDataDetails: "TypeFlow does not transmit, log, sell, or share your keystrokes, voice recordings, clipboard data, or TV pairing details with external servers or third parties. All communication occurs strictly peer-to-peer over your local encrypted Wi-Fi network.",
+    analytics: false,
+    analyticsProvider: "None (Zero telemetry / tracking)",
+    ads: false,
+    adsProvider: "None",
+    inAppPurchases: false,
+    inAppPurchasesDetails: "No in-app purchases required.",
+    accountRequired: false,
+    accountDeletion: false,
+
+    faqs: [
+      {
+        question: "Does TypeFlow send my keystrokes, passwords, or voice input to the cloud?",
+        answer: "No. All text input, voice dictation (processed via on-device Android Speech Recognizer), and clipboard transfers are sent strictly peer-to-peer over your local encrypted Wi-Fi network directly to your Android TV."
+      },
+      {
+        question: "Why does TypeFlow require Camera permission?",
+        answer: "Camera access is used solely to scan the QR code displayed on your TV screen for instant, zero-configuration local network pairing."
+      },
+      {
+        question: "Why does TypeFlow require Record Audio permission?",
+        answer: "Microphone access is used only when you explicitly press the Voice Typing button to convert speech into text on your phone before sending it to your TV."
+      },
+      {
+        question: "Does TypeFlow require creating an account or logging in?",
+        answer: "No. TypeFlow works completely offline and locally without requiring any user registration, accounts, or cloud logins."
+      }
+    ]
+  },
+  {
+    slug: "typeflow-tv",
+    name: "TypeFlow TV: Remote Keyboard IME",
+    description: "Android TV Input Method (IME) & Accessibility Service that receives real-time text input directly from your phone.",
+    developer: "Enlistech",
+    supportEmail: "support@enlistech.com",
+    website: "https://legal.enlistech.com",
+    packageName: "app.enlistech.typeflow.tv",
+    category: "Tools & Utilities",
+    icon: "Tv",
+    version: "1.0.0",
+    lastUpdated: "August 2026",
+
+    permissions: [
+      "Internet & Local Network (Local WebSocket Server)",
+      "Access Wi-Fi State",
+      "Change Wi-Fi Multicast State (Network Service Discovery Broadcast)",
+      "Bind Input Method Service (IME Text Insertion)",
+      "Bind Accessibility Service (Universal Smart Text Insertion)"
+    ],
+
+    collects: [
+      "Authorized paired phone IDs & cryptographic auth tokens (saved locally)",
+      "Local WebSocket server configuration & port bindings",
+      "IME & typing preferences"
+    ],
+
+    sharesData: false,
+    sharesDataDetails: "TypeFlow TV operates completely offline on your local network. It does not record keystrokes or share TV usage statistics, screen contents, or search queries with any third-party servers.",
+    analytics: false,
+    analyticsProvider: "None (Zero telemetry / tracking)",
+    ads: false,
+    adsProvider: "None",
+    inAppPurchases: false,
+    inAppPurchasesDetails: "No in-app purchases required.",
+    accountRequired: false,
+    accountDeletion: false,
+
+    faqs: [
+      {
+        question: "Why does TypeFlow TV require Input Method (IME) or Accessibility permissions?",
+        answer: "Android TV requires IME and Accessibility permissions to allow TypeFlow TV to inject text into focused input fields in streaming apps, search bars, and web browsers when received from your phone."
+      },
+      {
+        question: "Does TypeFlow TV log or store passwords entered into streaming apps?",
+        answer: "No. Keystrokes and text inputs are directly committed to the active application's input field in real time and are immediately discarded from memory."
+      },
+      {
+        question: "Can someone on another network connect to my TV?",
+        answer: "No. TypeFlow TV binds to your local private network (LAN) only and requires initial QR pairing with mutual cryptographic handshake verification."
+      },
+      {
+        question: "Does TypeFlow TV collect telemetry or viewing habits?",
+        answer: "No. TypeFlow TV collects zero analytics, telemetry, or app usage diagnostics."
       }
     ]
   }
