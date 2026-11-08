@@ -2,6 +2,87 @@ import { AppConfig } from "@/types/app";
 
 export const apps: AppConfig[] = [
   {
+    slug: "arrowescape",
+    name: "Arrow Escape",
+    description: "Relaxing arrow puzzle: tap each arrow to slide it off the board",
+    developer: "Enlistech",
+    supportEmail: "support@enlistech.com",
+    website: "https://legal.enlistech.com",
+    packageName: "com.enlistech.arrow.escape.game",
+    category: "Games – Puzzle",
+    icon: "Puzzle",
+    version: "1.0",
+    lastUpdated: "November 2026",
+
+    permissions: [
+      "Internet",
+      "Network State",
+      "Advertising ID",
+      "App Tracking Transparency (iOS, optional)"
+    ],
+
+    collects: [
+      "Game progress (levels, stars, hints, streaks, daily challenge results, event badges), stored locally only",
+      "Name you type for name-shaped boards, stored locally only",
+      "Sound and vibration preferences",
+      "Ad consent choices (Google User Messaging Platform)",
+      "Advertising ID / IDFA (IDFA only if you allow tracking), IP address, device and app info, collected by Google AdMob to serve and measure ads",
+      "Ad interaction and diagnostic data, collected by Google AdMob"
+    ],
+
+    sharesData: true,
+    sharesDataDetails: "Arrow Escape does not sell your data and has no servers of its own. To show ads, the Google Mobile Ads SDK (AdMob) and ad partners serving through AdMob mediation (such as Meta Audience Network) receive device identifiers, IP address and ad interaction data under their own privacy policies. In the EEA, UK and other regions that require it, ads are only requested after you give consent, and you can change your choice anytime under Settings > Ad privacy choices.",
+    analytics: false,
+    analyticsProvider: "",
+    ads: true,
+    adsProvider: "Google Mobile Ads (AdMob) Rewarded & Interstitial Ads, with Meta Audience Network via AdMob mediation",
+    inAppPurchases: false,
+    inAppPurchasesDetails: "",
+    accountRequired: false,
+    accountDeletion: false,
+
+    faqs: [
+      {
+        question: "Does Arrow Escape store my progress on a server?",
+        answer: "No. Your levels, stars, hints, streaks and the name you use for name boards are saved only on your device. Uninstalling the app or using Settings > Reset progress deletes them."
+      },
+      {
+        question: "Why does Arrow Escape show ads and what data do they use?",
+        answer: "Ads keep the game free. Google AdMob uses your device's advertising ID, IP address and basic device info to show and measure ads. On iOS, personalised ads use your IDFA only if you allow tracking when asked."
+      },
+      {
+        question: "How can I change my ad privacy choices?",
+        answer: "Where consent is required (EEA, UK and some US states), open Settings > Ad privacy choices. On Android you can also reset or delete your advertising ID in system settings; on iOS, turn off tracking under Settings > Privacy & Security > Tracking."
+      },
+      {
+        question: "What happens when I share a board code or daily result?",
+        answer: "Share codes and results are plain text created on your device and sent through your phone's share sheet only when you choose to share. Arrow Escape does not upload them anywhere."
+      },
+      {
+        question: "Do I need an account?",
+        answer: "No. Arrow Escape has no sign-up or login, so there is no account to delete. Your data stays on your device."
+      }
+    ],
+
+    // ---- NEW optional fields (this app needs them; useful for every app that runs ads) ----
+    platforms: ["Android", "iOS"],
+    iosBundleId: "com.enlistech.arrow.escape.game.ArrowEscape",
+    thirdParties: [
+      { name: "Google AdMob", purpose: "Advertising", policyUrl: "https://policies.google.com/privacy" },
+      { name: "Google User Messaging Platform", purpose: "Consent management", policyUrl: "https://policies.google.com/privacy" },
+      { name: "Meta Audience Network", purpose: "Advertising (via AdMob mediation)", policyUrl: "https://www.facebook.com/privacy/policy" }
+    ],
+    consent: "In the EEA, UK and some US states a consent form is shown before any ads are requested. On iOS, tracking is only used if you allow it (App Tracking Transparency).",
+    userControls: [
+      "Settings > Reset progress: deletes all game data on the device",
+      "Settings > Ad privacy choices: change ad consent (shown where required)",
+      "iOS Settings > Privacy & Security > Tracking",
+      "Android Settings > Privacy > Ads: reset or delete your advertising ID"
+    ],
+    dataRetention: "Game data stays on the device until you reset progress or uninstall. Ad data is kept by Google and its ad partners under their own policies.",
+    childrenPrivacy: "Arrow Escape is not directed at children under 13 and does not knowingly collect their personal data."
+  },
+  {
     slug: "appmanager",
     name: "AppManager",
     description: "Modern Android Package Manager & System Diagnostic Tool",

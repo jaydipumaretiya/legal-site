@@ -12,6 +12,7 @@ import {
   Scan,
   Package,
   Smartphone,
+  Puzzle,
   CheckCircle2,
   Lock,
   CreditCard
@@ -35,6 +36,8 @@ export default function AppCard({ app }: AppCardProps) {
         return <Activity className="w-7 h-7 text-emerald-600" />;
       case "Scan":
         return <Scan className="w-7 h-7 text-amber-600" />;
+      case "Puzzle":
+        return <Puzzle className="w-7 h-7 text-purple-600" />;
       default:
         return <Smartphone className="w-7 h-7 text-sky-600" />;
     }

@@ -29,6 +29,18 @@ export interface AppConfig {
     question: string;
     answer: string;
   }[];
+  // Optional extended fields
+  platforms?: string[];
+  iosBundleId?: string;
+  thirdParties?: {
+    name: string;
+    purpose: string;
+    policyUrl: string;
+  }[];
+  consent?: string;
+  userControls?: string[];
+  dataRetention?: string;
+  childrenPrivacy?: string;
 }
 
 export const COMPANY_INFO = {

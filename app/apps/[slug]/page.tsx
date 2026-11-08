@@ -17,6 +17,7 @@ import {
   Scan,
   Package,
   Smartphone,
+  Puzzle,
   Lock,
   CheckCircle2,
   AlertCircle,
@@ -79,6 +80,8 @@ export default async function AppOverviewPage({ params }: AppSlugParams) {
         return <Activity className="w-10 h-10 text-emerald-600" />;
       case "Scan":
         return <Scan className="w-10 h-10 text-amber-600" />;
+      case "Puzzle":
+        return <Puzzle className="w-10 h-10 text-purple-600" />;
       default:
         return <Smartphone className="w-10 h-10 text-sky-600" />;
     }
