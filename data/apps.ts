@@ -74,6 +74,7 @@ export const apps: AppConfig[] = [
       { name: "Google AdMob", purpose: "Advertising", policyUrl: "https://policies.google.com/privacy" },
       { name: "Google User Messaging Platform", purpose: "Consent management", policyUrl: "https://policies.google.com/privacy" },
       { name: "Meta Audience Network", purpose: "Advertising (via AdMob mediation)", policyUrl: "https://www.facebook.com/privacy/policy" },
+      { name: "Google Play Games Services / Apple Game Center", purpose: "Leaderboards (your gamer name and scores are visible to other players; optional)", policyUrl: "https://policies.google.com/privacy" },
       { name: "Google Firebase Remote Config", purpose: "Remote app settings (no personal data, uses a random installation ID)", policyUrl: "https://firebase.google.com/support/privacy" }
     ],
     consent: "In the EEA, UK and some US states a consent form is shown before any ads are requested. On iOS, tracking is only used if you allow it (App Tracking Transparency).",
