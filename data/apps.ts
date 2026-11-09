@@ -32,7 +32,7 @@ export const apps: AppConfig[] = [
 
     sharesData: true,
     sharesDataDetails: "Arrow Escape does not sell your data and has no servers of its own. To show ads, the Google Mobile Ads SDK (AdMob) and ad partners serving through AdMob mediation (such as Meta Audience Network) receive device identifiers, IP address and ad interaction data under their own privacy policies. In the EEA, UK and other regions that require it, ads are only requested after you give consent, and you can change your choice anytime under Settings > Ad privacy choices.",
-    analytics: false,
+    analytics: true,
     analyticsProvider: "",
     ads: true,
     adsProvider: "Google Mobile Ads (AdMob) Rewarded & Interstitial Ads, with Meta Audience Network via AdMob mediation",
@@ -73,7 +73,8 @@ export const apps: AppConfig[] = [
     thirdParties: [
       { name: "Google AdMob", purpose: "Advertising", policyUrl: "https://policies.google.com/privacy" },
       { name: "Google User Messaging Platform", purpose: "Consent management", policyUrl: "https://policies.google.com/privacy" },
-      { name: "Meta Audience Network", purpose: "Advertising (via AdMob mediation)", policyUrl: "https://www.facebook.com/privacy/policy" }
+      { name: "Meta Audience Network", purpose: "Advertising (via AdMob mediation)", policyUrl: "https://www.facebook.com/privacy/policy" },
+      { name: "Google Firebase Remote Config", purpose: "Remote app settings (no personal data, uses a random installation ID)", policyUrl: "https://firebase.google.com/support/privacy" }
     ],
     consent: "In the EEA, UK and some US states a consent form is shown before any ads are requested. On iOS, tracking is only used if you allow it (App Tracking Transparency).",
     userControls: [
