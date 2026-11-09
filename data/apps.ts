@@ -36,11 +36,10 @@ export const apps: AppConfig[] = [
     analyticsProvider: "",
     ads: true,
     adsProvider: "Google Mobile Ads (AdMob) Rewarded & Interstitial Ads, with Meta Audience Network via AdMob mediation",
-    inAppPurchases: false,
-    inAppPurchasesDetails: "",
+    inAppPurchases: true,
+    inAppPurchasesDetails: "Optional one-time \"Remove Ads\" purchase that permanently removes interstitial ads (optional rewarded ads stay available). Payments are processed entirely by Google Play Billing or the Apple App Store; Arrow Escape never sees or stores your payment details. The app only receives confirmation of which products you own, keeps that on your device, and lets you restore purchases on a new device from Settings > Restore purchases.",
     accountRequired: false,
     accountDeletion: false,
-
     faqs: [
       {
         question: "Does Arrow Escape store my progress on a server?",
@@ -61,6 +60,10 @@ export const apps: AppConfig[] = [
       {
         question: "Do I need an account?",
         answer: "No. Arrow Escape has no sign-up or login, so there is no account to delete. Your data stays on your device."
+      },
+      {
+        question: "How does the Remove Ads purchase work?",
+        answer: "It is an optional one-time purchase that removes the ads shown between levels forever. Payment is handled by Google Play or the App Store. On a new phone, open Settings > Restore purchases with the same store account."
       }
     ],
 
